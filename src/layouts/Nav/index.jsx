@@ -17,6 +17,9 @@ export default function Nav() {
         <li>
         <Link to="/props">Props</Link>
         </li>
+        <li>
+        <Link to="/inputs">Inputs</Link>
+        </li>
       </ul>
     </nav>
   )

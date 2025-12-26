@@ -13,6 +13,7 @@ function App() {
       <Route path="/usestate" element={<Pages.UseStatePage />} />
       <Route path="/props" element={<Pages.PropsPage />} />
       <Route path="/useEffect" element={<Pages.UseEffectPage />} />
+      <Route path="/inputs" element={<Pages.InputsPage />} />
     </Routes>
     </>
   )

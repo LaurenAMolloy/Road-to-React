@@ -3,9 +3,8 @@ import { useEffect, useState } from 'react'
 export default function UseEffectPage() {
     const[ponyList, setPonyList] = useState([])
     //Grab some data from pony api
-    //http://ponyapi.net/v1/character/all?limit=20
+    //http://ponyapi.net/v1/character/all?limit=10
     //Limit to 10?
-    //Does pony api support after
     //add load more?
 
     //async function to fetch data
