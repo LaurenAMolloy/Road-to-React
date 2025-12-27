@@ -14,6 +14,8 @@ function App() {
       <Route path="/props" element={<Pages.PropsPage />} />
       <Route path="/useEffect" element={<Pages.UseEffectPage />} />
       <Route path="/inputs" element={<Pages.InputsPage />} />
+      <Route path="/useContext" element={<Pages.UseContextPage />} />
+      <Route path="/tictactoe" element={<Pages.TicTacToePage />} />
     </Routes>
     </>
   )

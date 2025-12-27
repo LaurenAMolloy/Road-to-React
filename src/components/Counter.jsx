@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 export default function Counter() {
     //Add a reset button!
-    //Controlled input vs 
 
     //state for counter
     const[count, setCount] = useState(0);
@@ -27,8 +26,6 @@ export default function Counter() {
 
   return (
     <div className="flex h-screen flex-col justify-center items-center">
-        <h1 className="text-4xl pb-4">Here we can see the virtual DOM in action!</h1>
-        <h2 className="text-1xl text-center">Only the p tag containing the count variable is updated in the real DOM</h2>
         <p className="text-4xl pt-20">{count}</p>
         <div className='flex w-1/2 justify-around'>
             <button onClick={handleDecrement} className="bg-violet-700 w-1/4 py-2 rounded-full  text-white">-</button>

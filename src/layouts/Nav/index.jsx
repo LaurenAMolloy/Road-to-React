@@ -20,6 +20,12 @@ export default function Nav() {
         <li>
         <Link to="/inputs">Inputs</Link>
         </li>
+        <li>
+        <Link to="/usecontext">useContext</Link>
+        </li>
+        <li>
+        <Link to="/tictactoe">TicTacToe</Link>
+        </li>
       </ul>
     </nav>
   )
