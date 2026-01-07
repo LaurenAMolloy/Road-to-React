@@ -1,4 +1,4 @@
-import ProfileCard from '../../components/ProfileCard'
+import ProfileCard from '../../components/ProfileCard/ProfileCard'
 import Macaron from '../../assets/macaron.jpg'
 import FestiveCookies from '../../assets/FestiveCookies.jpg'
 import Cookies from '../../assets/Cookies.jpg'

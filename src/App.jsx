@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router'
 import * as Pages from './pages'
 import Nav from './layouts/Nav'
+import { useState } from 'react'
 
 function App() {
-  //add Nav
-  //add routes
+  
   return (
     <>
     <Nav />
@@ -16,6 +16,7 @@ function App() {
       <Route path="/inputs" element={<Pages.InputsPage />} />
       <Route path="/useContext" element={<Pages.UseContextPage />} />
       <Route path="/tictactoe" element={<Pages.TicTacToePage />} />
+      <Route path="/testing" element={<Pages.TestingPage />} />
     </Routes>
     </>
   )

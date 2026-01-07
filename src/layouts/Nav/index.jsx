@@ -7,7 +7,8 @@ export default function Nav() {
   return (
     <nav className="w-full flex justify-between py-2 px-2 bg-black text-white">
       <Link to="/">REACT</Link>
-      <ul>
+      <div>
+      <ul className='flex justify-evenly gap-2'>
         <li>
         <Link to="/usestate">useState</Link>
         </li>
@@ -26,7 +27,11 @@ export default function Nav() {
         <li>
         <Link to="/tictactoe">TicTacToe</Link>
         </li>
+        <li>
+        <Link to="/testing">Testing</Link>
+        </li>
       </ul>
+      </div>
     </nav>
   )
 }

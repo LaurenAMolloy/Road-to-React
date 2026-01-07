@@ -1,4 +1,4 @@
-import BeerCard from '../../components/BeerCard'
+import BeerCard from '../../components/BeerCard/BeerCard'
 import { useEffect, useState } from 'react'
 
 export default function UseEffectPage() {

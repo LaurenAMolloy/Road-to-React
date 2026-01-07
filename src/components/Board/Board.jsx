@@ -1,16 +1,18 @@
-import Square from '../components/Square'
+import Square from '../Square/Square'
 import { useState } from 'react'
 export default function Board() {
   //This creates an array where each entry corresponds to the board
   //Like so ['O', null, 'X', 'X', 'X', 'O', 'O', null, null]
 
   //This is an example of a closure
+  //The function handleClick has access to the state variable
   const [squares, setSquares] = useState(Array(9).fill(null));
 
   function handleClick() {
-    //CREATE A COPY OF SQUARES ARRAY
+
+    //Create a copy of the squares array
     const nextSquares = squares.slice();
-    //UPDATE BY ADDING X TO FIRST SQUARE
+    //Update by adding X to the first square
     nextSquares[0] = 'X';
     setSquares(nextSquares);
   }
