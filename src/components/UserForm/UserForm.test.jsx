@@ -25,6 +25,7 @@ test('it shows two inputs and a button', () => {
 
 test('it calls onUserAdd when the form is submitted', async () => {
     const user = userEvent.setup();
+    
     //mock function
     const onUserAdd = vi.fn();
     //Render
@@ -40,17 +41,41 @@ test('it calls onUserAdd when the form is submitted', async () => {
     await user.type(emailInput,'jane@jane.com');
 
     //Find button
+    //i means do not worry about upper or lower case!
     const button = screen.getByRole('button', { name: /add user/i });
 
     //Simulate clicking the button
     await user.click(button);
 
-    //Assertion to make sure callback is called woth email/name
-    // expect(argList).toHaveLength(1);
-    // expect(argList[0][0]).toEqual({ name: jane, email: 'jane@jane.com'})
+    
     expect(onUserAdd).toHaveBeenCalledTimes(1)
     expect(onUserAdd).toHaveBeenCalledWith({
         name:'jane', 
         email:'jane@jane.com' 
     })
+});
+
+test('empties the two inputs when a form is submitted', async () => {
+    const user = userEvent.setup();
+    //Render
+    //Empty arrow function
+    //We don't care about the results from the function
+    render(<UserForm onUserAdd={() => {}} />)
+    
+    //Grab the inputs
+    const nameInput = screen.getByRole('textbox', { name: /name/i});
+    const emailInput = screen.getByRole('textbox', { name: /email/i});
+    const button = screen.getByRole('button');
+
+    await user.click(nameInput);
+    await user.keyboard('jane');
+
+    await user.click(emailInput);
+    await user.keyboard('jane@jane.com');
+
+    await user.click(button);
+
+    //Make assertions
+    expect(nameInput).toHaveValue('')
+    expect(emailInput).toHaveValue('')
 });

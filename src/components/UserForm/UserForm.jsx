@@ -10,6 +10,8 @@ export default function UserForm({ onUserAdd }) {
         event.preventDefault()
         //console.log(name, email)
         onUserAdd({ name, email })
+        setName('');
+        setEmail('');
     }
     
   return (
