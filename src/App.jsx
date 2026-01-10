@@ -1,7 +1,9 @@
-import { Routes, Route } from 'react-router'
-import * as Pages from './pages'
-import Nav from './layouts/Nav'
-import { useState } from 'react'
+import { Routes, Route } from 'react-router';
+import * as Pages from './pages';
+import MainLayout from './layouts/MainLayout';
+import CoreLayout from './layouts/CoreLayout';
+import Nav from './components/Nav';
+ 
 
 function App() {
   
@@ -9,13 +11,11 @@ function App() {
     <>
     <Nav />
     <Routes>
-      <Route path="/" element={<Pages.HomePage />} />
-      <Route path="/usestate" element={<Pages.UseStatePage />} />
-      <Route path="/props" element={<Pages.PropsPage />} />
-      <Route path="/useEffect" element={<Pages.UseEffectPage />} />
-      <Route path="/inputs" element={<Pages.InputsPage />} />
-      <Route path="/useContext" element={<Pages.UseContextPage />} />
-      <Route path="/tictactoe" element={<Pages.TicTacToePage />} />
+      <Route path="/" element={<MainLayout />} />
+      <Route index element={<Pages.HomePage />} />
+      <Route path="/core" element={<Pages.CoreConceptsPage />} />
+      <Route path="/ui" element={<Pages.UIPage />} />
+      <Route path="/projects" element={<Pages.TestingPage />} />
       <Route path="/testing" element={<Pages.TestingPage />} />
     </Routes>
     </>

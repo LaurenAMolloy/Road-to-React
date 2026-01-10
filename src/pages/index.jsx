@@ -1,4 +1,5 @@
 export { default as HomePage } from "./HomePage"
+export { default as CoreConceptsPage } from "./CoreConcepts"
 export { default as UseStatePage } from "./UseStatePage";
 export { default as PropsPage} from "./PropsPage";
 export { default as UseEffectPage} from "./UseEffectPage"
