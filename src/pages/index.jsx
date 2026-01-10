@@ -7,3 +7,5 @@ export { default as InputsPage } from "./InputsPage";
 export { default as UseContextPage } from "./UseContextPage";
 export { default as TicTacToePage } from "./TicTacToePage";
 export { default as TestingPage } from './TestingPage';
+export { default as UIPage } from './UIPage';
+export { default as ProjectsPage } from './ProjectsPage';

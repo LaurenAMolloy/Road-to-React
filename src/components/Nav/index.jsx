@@ -9,7 +9,18 @@ export default function Nav() {
       <Link to="/">REACT</Link>
       <div>
       <ul className='flex justify-evenly gap-2'>
-       <Link to="/coreconcepts">Core Concepts</Link>
+      <li>
+        <Link to="/core">Core</Link>
+      </li>
+      <li>
+        <Link to="/ui">UI</Link>
+      </li>
+      <li>
+        <Link to="/projects">Projects</Link>
+      </li>
+      <li>
+        <Link to="/testing">Testing</Link>
+      </li>
       </ul>
       </div>
     </nav>
