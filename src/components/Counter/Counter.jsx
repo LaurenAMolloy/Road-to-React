@@ -24,8 +24,13 @@ export default function Counter() {
         setInput("")
     }
 
+    const handleReset = () => {
+        setCount(0)
+    }
+
+
   return (
-    <div className="flex h-screen flex-col justify-center items-center">
+    <div className="flex h-screen flex-col items-center pt-5">
         <p className="text-4xl pt-20">{count}</p>
         <div className='flex w-1/2 justify-around'>
             <button onClick={handleDecrement} className="bg-violet-700 w-1/4 py-2 rounded-full  text-white">-</button>
@@ -42,6 +47,10 @@ export default function Counter() {
         <button type="submit" 
         className="bg-violet-700 w-full py-2 rounded-full text-white">
             Submit
+        </button>
+        <button onClick={handleReset} 
+        className="bg-violet-700 w-full py-2 rounded-full text-white">
+            Reset
         </button>
         </form>
     </div>

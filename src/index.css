@@ -82,3 +82,7 @@ td {
 tbody tr:nth-child(odd) {
     background-color: #eeeeee;
 }
+
+.active {
+    text-decoration: underline;
+}
