@@ -6,7 +6,7 @@ import CoreDashBoard from '../../components/CoreDashBoard'
 export default function CoreLayout() {
   return (
     <>
-    <div className="core-layout">
+    <div className="flex flex-col items-center w-full">
         <CoreDashBoard />
         <Outlet />
     </div>

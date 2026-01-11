@@ -2,21 +2,24 @@ import React from 'react'
 import { Link } from 'react-router'
 
 export default function CoreDashBoard() {
+
+    const corelinks = [
+        {label: "State", to:"useState"},
+        {label: "Props", to:"props"},
+        {label: "Effects", to:"effects"},
+        {label: "Context", to:"useContext"},
+    ]
+
+    const renderedLinks = corelinks.map((link) => {
+        return  <li key={link.label} className='bg-gray-400 px-3 py-1 rounded-full  hover:bg-gray-500'>
+        <Link to={link.to}>{link.label}</Link>
+    </li>
+    });
+
   return (
-    <div>
-        <ul>
-            <li>
-                <Link to="usestate">State</Link>
-            </li>
-            <li>
-                <Link to="props">Props</Link>
-            </li>
-            <li>
-                <Link to="useeffect">Effects</Link>
-            </li>
-            <li>
-                <Link to="usecontext">Context</Link>
-            </li>
+    <div className='w-full'>
+        <ul className='flex flex-wrap justify-evenly font-bold gap-3 p-4'>
+            {renderedLinks}
         </ul>
     </div>
   )
