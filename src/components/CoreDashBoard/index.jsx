@@ -6,8 +6,8 @@ export default function CoreDashBoard() {
     const corelinks = [
         {label: "State", to:"useState"},
         {label: "Props", to:"props"},
-        {label: "Effects", to:"effects"},
-        {label: "Context", to:"useContext"},
+        {label: "Effects", to:"useeffect"},
+        {label: "Context", to:"usecontext"},
     ]
 
     const renderedLinks = corelinks.map((link) => {

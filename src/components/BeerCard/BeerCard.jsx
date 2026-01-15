@@ -3,11 +3,11 @@ export default function BeerCard({ beerList }) {
   const renderedBeers = beerList.map((beer) => {
     const imgUrl = `https://punkapi-alxiw.amvera.io/v3/images/${beer.image}`
 
-    return <div className="bg-slate-200 p-3 rounded shadow flex flex-col items-center gap-2" key={beer.id}>
+    return <article className="bg-slate-200 p-3 rounded shadow flex flex-col items-center gap-2" key={beer.id}>
       <h1 className="font-extrabold text-1xl">{beer.name}</h1>
-      <img width={50} height={100} src={imgUrl}></img>
+      <img width={50} height={100} src={imgUrl} alt={beer.name}></img>
       <p>{beer.tagline}</p>
-    </div>
+    </article>
   })
   //Grid to display cards
   return (
